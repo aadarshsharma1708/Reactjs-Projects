@@ -1,1 +1,1 @@
-This is react repository
+This is a collection of React.js projects created for practice and learning purposes. Each project explores different concepts, patterns, and features of the React ecosystem, including hooks, routing, state management, and more. Ideal for learning, experimentation, and reference.
