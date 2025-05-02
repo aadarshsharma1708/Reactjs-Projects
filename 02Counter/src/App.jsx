@@ -5,11 +5,29 @@ import './App.css'
 
 function App() {
 
-  let [counter,setCounter] = useState(5)
+  const [counter,setCounter] = useState(5)
   const addValue =()=>{
     console.log("Value added :",counter);
 
     setCounter(counter+1);
+
+    // setCounter(counter+1);
+    // setCounter(counter+1);
+    // setCounter(counter+1);
+    // setCounter(counter+1);
+    // setCounter(counter+1);           // This will not work as expected it will update the state only once
+    
+    // if we want to update the state based on the previous state, we can use the function form of setState
+
+    // setCounter((prevCounter) => prevCounter + 1);
+    // setCounter((prevCounter) => prevCounter + 1);
+    // setCounter((prevCounter) => prevCounter + 1);
+    // setCounter((prevCounter) => prevCounter + 1);
+
+
+
+
+
     console.log("After setCount added :",counter);  // This will re-render the component and update the UI
     if(counter >= 10){
       alert("Counter value can not be more than 10");
@@ -27,12 +45,14 @@ function App() {
 
   const removeValue =()=>{
     
-    counter = counter - 1;
-    setCounter(counter);
-    if(counter+1 <= 0){
+    // counter = counter - 1;
+    console.log("Value removed :",counter);
+    setCounter(counter-1);
+    if(counter<= 0){
       alert("Counter value can not be less than 0");
       return;
     }
+    console.log("After setCount removed :",counter);  // This will re-render the component and update the UI
   }
 
 
